@@ -1,0 +1,2 @@
+# HolisticWare.JabberClient
+HolisticWare.JabberClient
