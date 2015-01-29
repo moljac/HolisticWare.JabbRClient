@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Xamarin.Forms;
 
 namespace JabbR.Client.XamarinForms
 {
-	public partial class UserControl : ContentView
+	public partial class About : ContentPage
 	{
-		public UserControl ()
+		public About ()
 		{
 			InitializeComponent ();
 		}

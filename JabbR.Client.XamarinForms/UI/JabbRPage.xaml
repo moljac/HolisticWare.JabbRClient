@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="JabbR.Client.XamarinForms.JabbRPage"
+	xmlns:CustomControl="clr-namespace:JabbR.Client.XamarinForms;assembly=JabbR.Client.XamarinForms"
+	>
+
+	<TabbedPage.Children>
+
+		<ContentPage Title="Jabbr Login" >
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+
+			<Grid.RowDefinitions>
+				<RowDefinition></RowDefinition>
+				<RowDefinition></RowDefinition>
+				<RowDefinition></RowDefinition>
+				<RowDefinition></RowDefinition>
+				<RowDefinition></RowDefinition>
+				<RowDefinition></RowDefinition>
+			</Grid.RowDefinitions>
+				
+			<Label 
+				Grid.Row="0" Grid.Column="0"
+				Text="JabbR Server:"
+				>
+			</Label>
+			<Entry
+				Grid.Row="0" Grid.Column="1"
+				x:Name="textBoxJabbRServer"
+				Text="https://jabbr.net"
+				>
+			</Entry>
+
+			<Label
+				Grid.Row="1" Grid.Column="0"
+				Text="Room:"
+				>
+			</Label>
+			<Entry
+				Grid.Row="1" Grid.Column="1"
+				x:Name="textBoxRoom"
+				Placeholder = "Room..."
+				Text="AspNetvNext"
+				>
+			</Entry>
+
+			<Label 
+				Grid.Row="2" Grid.Column="0"
+				Text="Username:"
+				>
+			</Label>
+			<Entry
+				Grid.Row="2" Grid.Column="1"
+				x:Name="textBoxUsername"
+				Placeholder = "Username..."
+				Text="moljac"
+				>
+			</Entry>
+
+			<Label 
+				Grid.Row="3" Grid.Column="0"
+				Text="Password:"
+				>
+			</Label>
+			<Entry
+				Grid.Row="3" Grid.Column="1"
+				x:Name="textBoxPassword"
+				Placeholder = "Password..."
+				IsPassword="true"
+				>
+			</Entry>
+
+
+			<Button
+				x:Name="buttonLogin"
+				Grid.Row="4" Grid.Column="1"
+				Text="Login"
+				Clicked="buttonLogin_Clicked"
+				>
+			</Button>
+		</Grid>
+
+		</ContentPage>
+
+		<ContentPage Title="Lobby" >
+			<CustomControl:UserControl>
+			</CustomControl:UserControl>
+		</ContentPage>
+
+		<ContentPage Title="Room: XXXX" >
+			<CustomControl:UserControl>
+			</CustomControl:UserControl>
+		</ContentPage>
+
+	</TabbedPage.Children>
+
+</TabbedPage>
