@@ -12,15 +12,27 @@ using Xamarin.Forms.Platform.Android;
 namespace JabbR.Client.XamarinForms.Droid
 {
 	[Activity(Label = "JabbR.Client.XamarinForms", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity
+	public class MainActivity 
+		: 
+		//AndroidActivity
+		global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
+			base.OnCreate (bundle);
+
+	        global::Xamarin.Forms.Forms.Init (this, bundle);
+
+	        LoadApplication (new App ()); // method is new in 1.3
+
+	        return;
+			/*
 			base.OnCreate(bundle);
 
 			Xamarin.Forms.Forms.Init(this, bundle);
 
 			SetPage(App.GetMainPage());
+			*/
 		}
 	}
 }
